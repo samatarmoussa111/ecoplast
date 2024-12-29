@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Blanc par défaut pour un fond neutre */
+    --foreground: 210 50% 12%; /* #051b2b en HSL, pour le texte principal */
+    --card: 0 0% 100%; /* Même que le background */
+    --card-foreground: 210 50% 12%; /* Même que foreground */
+    --popover: 0 0% 100%; /* Blanc, pour les pop-ups */
+    --popover-foreground: 210 50% 12%; /* Texte des pop-ups */
+    --primary: 129 76% 38%; /* #149529 en HSL, une teinte verte vive */
+    --primary-foreground: 0 0% 100%; /* Texte blanc pour un contraste optimal */
+    --secondary: 198 80% 50%; /* Couleur secondaire, basée sur #10a4be */
+    --secondary-foreground: 0 0% 20%; /* Texte sombre pour contraster */
+    --muted: 210 16% 90%; /* Gris clair pour les éléments subtils */
+    --muted-foreground: 210 12% 34%; /* Gris foncé pour le texte sur fond muted */
+    --accent: 198 80% 50%; /* Réutilisation de la couleur secondaire */
+    --accent-foreground: 0 0% 20%; /* Contraste texte sombre */
+    --destructive: 0 84% 60%; /* Rouge vif, classique pour les actions négatives */
+    --destructive-foreground: 0 0% 100%; /* Texte blanc pour contraste */
+    --border: 210 16% 90%; /* Gris clair pour les bordures */
+    --input: 210 16% 90%; /* Identique aux bordures */
+    --ring: 129 76% 38%; /* Même que primary */
+    --radius: 0.5rem; /* Rayon par défaut pour les bordures arrondies */
+    --chart-1: 12 76% 61%; /* Une couleur de graphique vive (orange/rouge) */
+    --chart-2: 129 66% 40%; /* Vert légèrement différent du primary */
+    --chart-3: 198 70% 45%; /* Bleu pour des graphiques */
+    --chart-4: 43 74% 66%; /* Jaune vif pour variation */
+    --chart-5: 280 65% 60%; /* Violet pour équilibre */
+  }
+}
+
+
+@layer utilities {
+  .animate-in {
+    animation: animate-in 0.5s ease-out;
+  }
+  
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
